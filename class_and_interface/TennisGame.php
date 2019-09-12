@@ -18,7 +18,8 @@ class TennisGame implements cases
 
     public function gameResults()
     {
-        if ($this->pointOfPlayer1 == $this->pointOfPlayer2) {
+        $points_Equal = $this->pointOfPlayer1 == $this->pointOfPlayer2;
+        if ($points_Equal) {
             switch ($this->pointOfPlayer1) {
                 case self::DEFAULT_SCORE_0:
                     $this->score = self::ALL_ZERO_POINT;
